@@ -10,6 +10,17 @@ Após ativar o GitHub Pages em **Settings → Pages → Deploy from a branch →
 
 O arquivo `index.html` já contém todo o CSS, JavaScript e o logo original incorporados. Portanto, não são necessárias instalações, servidores especiais nem build.
 
+## Catálogo oficial incluído
+
+Em 30/10/2026 foram incorporados **27 registros reais** da planilha [MUSIFLEX — Catálogo Musical Oficial](https://docs.google.com/spreadsheets/d/13Nuht6S5lHq-giTlGrs84eG3MifpoCBUv-AvObDuGis/edit), preservando título, compositor, intérprete, tom, nível quando indicado, aba, páginas, material, BPM e outras observações. Todos foram adicionados ao aplicativo como **catálogo inicial**.
+
+- Códigos estáveis `MFC-001` a `MFC-027`.
+- Para visitantes novos, as 27 obras aparecem assim que abrem a página.
+- Para pessoas que já cadastraram músicas no navegador, o primeiro acesso à nova versão **acrescenta os itens ausentes**, sem apagar ou substituir os locais.
+- Importação inicial ocorre uma única vez por navegador. Edições posteriores, exclusões e novos cadastros ficam somente naquele navegador até exportar/importar backup.
+- Fonte editável para futuras migrações: `data/catalogo-inicial.json`.
+- Sem vínculo vivo de sincronização: mudanças futuras no Google Sheets não aparecem automaticamente no GitHub.
+
 ## Funcionalidades
 
 - Cadastrar, editar e excluir estudos, partituras, cifras e partituras cifradas.
