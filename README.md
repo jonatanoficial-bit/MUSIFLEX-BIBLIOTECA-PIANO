@@ -12,18 +12,21 @@ O arquivo `index.html` já contém todo o CSS, JavaScript e o logo original inco
 
 ## Catálogo oficial incluído
 
-Em 31/10/2026 o catálogo passou a conter **83 registros reais** (27 anteriores + **56 novos**) da planilha [MUSIFLEX — Catálogo Musical Oficial](https://docs.google.com/spreadsheets/d/13Nuht6S5lHq-giTlGrs84eG3MifpoCBUv-AvObDuGis/edit), preservando título, compositor, intérprete, tom, nível quando indicado, aba, páginas, material, BPM e outras observações. Todos foram adicionados ao aplicativo como **catálogo inicial**.
+Atualizado em 31/10/2026 com **95 registros** extraídos da planilha [MUSIFLEX — Catálogo Musical Oficial](https://docs.google.com/spreadsheets/d/13Nuht6S5lHq-giTlGrs84eG3MifpoCBUv-AvObDuGis/edit).
 
-- Códigos estáveis `MFC-001` a `MFC-083`.
-- Para visitantes novos, as 83 obras aparecem assim que abrem a página.
-- Para quem já utiliza o catálogo, a nova versão **acrescenta os 56 novos registros** sem substituir registros locais existentes. Obras entre 001–027 excluídas manualmente não serão restauradas caso a importação anterior já tenha ocorrido.
-- A atualização dos 56 registros ocorre uma única vez por navegador. Edições posteriores, exclusões e novos cadastros ficam somente naquele navegador até exportar/importar backup.
-- Fonte editável para futuras migrações: `data/catalogo-inicial.json`.
-- Sem vínculo vivo de sincronização: mudanças futuras no Google Sheets não aparecem automaticamente no GitHub.
+- Primeira versão: 27 registros; segunda: 83 registros (+56); terceira: **95 registros (+12)**.
+- Códigos estáveis de `MFC-001` a `MFC-095`.
+- Foram preservados os 83 registros anteriormente publicados; os 12 novos foram acrescentados.
+- A identidade de uma obra considera título, aba **e artista** (exemplo: "O Sol", com artistas diferentes, é preservada em dois registros).
+- O navegador com versão antiga recebe somente os registros novos pertinentes à sua migração. Edições e exclusões locais não são substituídas.
+- Novos visitantes visualizam a coleção completa de 95 registros.
+- Alguns campos não informados na planilha aparecem como não definidos, com observações explícitas.
+- A fonte versionada dos dados fica em `data/catalogo-inicial.json`.
+- **Não há sincronização automática**: os dados fornecidos via Google Sheets são importados em atualizações ao código; mudanças e novos cadastros locais são salvos em `localStorage`.
 
-## Atualização de 31/10/2026
+## Atualização de 31/10/2026 — lote 3
 
-A versão publicada foi atualizada com 56 novas músicas, chegando a 83 itens. Entraram repertórios populares (Queen, The Beatles, Guns N' Roses, Elton John), gospel, jazz/blues, cifras e obras eruditas. Registros duplicados no título, mas de seções físicas diferentes, permanecem separados. Alguns tipos estavam em branco na planilha original e são identificados como provisórios no campo Observações.
+As novas entradas incluem Lady Gaga, Queen, Taylor Swift, Adele, Whitney Houston, Fernandinho, Gabriel Guedes, Get Worship e Marília Mendonça. A entrada "O Sol" de Vitor Kley é mantida separadamente de "O Sol" de Jota Quest. O registro 087 (De Quem É a Culpa) tem formato/aba incompletos na planilha e foi marcado como provisório.
 
 ## Funcionalidades
 
