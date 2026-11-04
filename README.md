@@ -12,20 +12,20 @@ O arquivo `index.html` já contém todo o CSS, JavaScript e o logo original inco
 
 ## Catálogo oficial incluído
 
-Atualizado em **03/11/2026** com **134 registros** da planilha [MUSIFLEX — Catálogo Musical Oficial](https://docs.google.com/spreadsheets/d/13Nuht6S5lHq-giTlGrs84eG3MifpoCBUv-AvObDuGis/edit).
+Atualizado em **04/11/2026** com **154 registros** da planilha [MUSIFLEX — Catálogo Musical Oficial](https://docs.google.com/spreadsheets/d/13Nuht6S5lHq-giTlGrs84eG3MifpoCBUv-AvObDuGis/edit).
 
-- Versões: 27 registros iniciais → 83 (+56) → 95 (+12) → **134 (+39)**.
-- Códigos `MFC-001` a `MFC-134`, sem duplicatas; a versão anterior foi preservada.
-- Registros representam cada item físico, portanto uma mesma música pode ter cifra e partitura em abas diferentes.
-- **Migração incremental não destrutiva**: quem já havia recebido os 95 registros recebe apenas os 39 novos. Registros editados ou excluídos intencionalmente no navegador não são restaurados nem sobrescritos.
-- Visitantes novos encontram todos os 134 registros automaticamente.
-- Campos como tom, artista, compositor, pasta, aba, página, cópias, BPM, compasso e observações são derivados da planilha sem inventar dados ausentes.
-- Os dados versionados estão em `data/catalogo-inicial.json`. A planilha é a fonte das atualizações manuais, não há sincronização permanente.
-- Novos cadastros realizados no navegador permanecem em `localStorage`. Faça backup JSON regular para evitar perdas.
+- Histórico: 27 registros iniciais → 83 (+56) → 95 (+12) → 134 (+39) → **154 (+20)**.
+- Códigos `MFC-001` a `MFC-154`, únicos. O conteúdo anterior foi preservado.
+- **Migração incremental não destrutiva**: navegadores que já receberam 134 registros recebem apenas os 20 novos. Edições/exclusões anteriores no navegador não são revertidas.
+- Identificação de versões: título, aba, artista, **tipo de material e tom**. Isso preserva cifras de uma mesma música em tonalidades diferentes (ex.: `Tattooed Heart` em Dó e Sol maior), bem como partituras e cifras da mesma obra.
+- Novos visitantes recebem as 154 obras. O código principal inclui os registros sem necessitar de conexão direta com Google Sheets.
+- Os dados de origem ficam também em `data/catalogo-inicial.json`, para conferência e próximas migrações.
+- A planilha é consultada em atualizações manuais; **não existe sincronização contínua automática** com Google Sheets.
+- Cadastro realizado diretamente no site é salvo por navegador em `localStorage`. Faça backups JSON regularmente.
 
-## Atualização de 03/11/2026 — lote 4
+## Atualização de 04/11/2026 — lote 5
 
-Entraram 39 itens novos, incluindo músicas gospel (Laura Souguellis, Isaías Saad, Maria Marçal, Kirk Franklin), peças de piano clássico (Diabelli, Burgmüller, Tchaikovsky), pop/rock (Elton John, Lady Gaga, Van Halen, Billy Joel) e temas de cinema e séries (Star Wars, Stranger Things, Jurassic Park). Diferentes formatos das músicas **Your Song** e **Havana** foram preservados como itens distintos.
+Foram incorporadas 20 entradas entre `MFC-135` e `MFC-154`: repertório de Adele, John Legend, Michael Jackson, Ariana Grande, Bruno Mars, The Weeknd, Elis Regina e RPM; gospel de Renascer Praise, Eli Soares, Hillsong, Sued Silva e Isaías Saad; além de estudos de música popular. Foram preservadas as versões distintas de `Bondade de Deus`, `All of Me`, `Hakuna Matata`, `When I Was Your Man` e `Tattooed Heart`.
 
 ## Funcionalidades
 
